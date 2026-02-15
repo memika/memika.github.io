@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: rebensburgsolutions.com
-Token: c4cdc0e0d08beb93775c820bc1fe389f2754dc0f9c395a18b3e85ff6d0dde38d

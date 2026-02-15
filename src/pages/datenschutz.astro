@@ -1,0 +1,146 @@
+---
+import PlaygroundLayout from '../layouts/PlaygroundLayout.astro';
+---
+
+<PlaygroundLayout title="Datenschutzerklärung | Mika Rebensburg" description="Datenschutzhinweise">
+  <main class="privacy-page">
+    <a class="back-link" href="/">Back to homepage</a>
+    <h1>Datenschutzerklärung</h1>
+
+    <section>
+      <h2>Hosting</h2>
+      <p>Unser Hoster erhebt in sog. Logfiles folgende Daten, die Ihr Browser übermittelt:</p>
+      <p>
+        IP-Adresse, die Adresse der vorher besuchten Website (Referer Anfrage-Header), Datum und Uhrzeit der
+        Anfrage, Zeitzonendifferenz zur Greenwich Mean Time, Inhalt der Anforderung, HTTP-Statuscode, übertragene
+        Datenmenge, Website, von der die Anforderung kommt und Informationen zu Browser und Betriebssystem.
+      </p>
+      <p>
+        Das ist erforderlich, um unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten. Dies
+        entspricht unserem berechtigten Interesse im Sinne des Art. 6 Abs. 1 S. 1 lit. f DSGVO.
+      </p>
+      <p>Es erfolgt kein Tracking und wir haben auf diese Daten keinen direkten Zugriff.</p>
+      <p>Wir setzen für die Zurverfügungstellung unserer Website folgenden Hoster ein:</p>
+      <p>
+        GitHub Inc.<br />
+        88 Colin P Kelly Jr St<br />
+        San Francisco, CA 94107<br />
+        United States
+      </p>
+      <p>
+        Dieser ist Empfänger Ihrer personenbezogenen Daten. Dies entspricht unserem berechtigten Interesse im Sinne
+        des Art. 6 Abs. 1 S. 1 lit. f DSGVO, selbst keinen Server in unseren Räumlichkeiten vorhalten zu müssen.
+        Serverstandort ist USA.
+      </p>
+      <p>
+        Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub finden Sie unter:
+        <a
+          href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub Privacy Statement (GitHub Pages)
+        </a>
+      </p>
+      <p>
+        Sie haben das Recht der Verarbeitung zu widersprechen. Ob der Widerspruch erfolgreich ist, ist im Rahmen
+        einer Interessenabwägung zu ermitteln.
+      </p>
+      <p>Die Daten werden gelöscht, sobald der Zweck der Verarbeitung entfällt.</p>
+      <p>
+        Die Verarbeitung der unter diesem Abschnitt angegebenen Daten ist weder gesetzlich noch vertraglich
+        vorgeschrieben. Die Funktionsfähigkeit der Website ist ohne die Verarbeitung nicht gewährleistet.
+      </p>
+      <p>
+        GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt. Diese gelten für alle
+        weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU
+        verarbeitet. Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden
+        Sie unter:
+        <a
+          href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1-the-standard-contractual-clauses-processors"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub Data Protection Addendum (SCCs)
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Rechtliche Hinweise</h2>
+      <p>
+        Grundsätzlich ist ein Auftragsverarbeitungsvertrag mit dem Hoster abzuschließen. Das bayerische Landesamt für
+        Datenschutzaufsicht hat für das Hosting rein statischer Websites eine Ausnahme gemacht. Für den Fall, dass die
+        Webseite der Selbstdarstellung dient, z. B. von Vereinen oder Kleinunternehmen, keine personenbezogenen Daten
+        an den Betreiber fließen und kein Tracking stattfindet, liegt keine Auftragsverarbeitung vor.
+      </p>
+      <p>
+        Weiter heißt es: „Die Tatsache, dass auch beim Hosting von statischen Webseiten zwangsläufig IP-Adressen, d.
+        h. personenbezogene Daten, verarbeitet werden müssen, führt nicht zur Annahme einer Auftragsverarbeitung. Das
+        wäre nicht sachgerecht. Die (kurzfristige) IP-Adressenspeicherung ist vielmehr noch der
+        TK-Zugangsvermittlung des Website-Hosters nach dem TKG zuzurechnen und dient in erster Linie
+        Sicherheitszwecken des Hosters.“
+      </p>
+      <p>
+        Quelle:
+        <a href="https://www.lda.bayern.de/media/veroeffentlichungen/FAQ_Hosting_keine_Auftragsverarbeitung.pdf" target="_blank" rel="noreferrer">
+          FAQ Hosting – keine Auftragsverarbeitung (BayLDA)
+        </a>
+      </p>
+      <p>Wir gehen davon aus, dass diese Ausnahme auf GitHub Pages anzuwenden ist.</p>
+    </section>
+  </main>
+</PlaygroundLayout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600;700&display=swap');
+
+  .privacy-page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem 3rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #1c2422;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.1rem;
+    color: #176c5c;
+    text-underline-offset: 3px;
+  }
+
+  h1,
+  h2 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  section {
+    margin-top: 1.2rem;
+    border: 1px solid #dfd4c4;
+    border-radius: 14px;
+    padding: 1rem;
+    background: #fffdf9;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin: 0.6rem 0 0;
+    color: #3e4d48;
+    line-height: 1.45;
+  }
+
+  a {
+    color: #176c5c;
+    text-underline-offset: 3px;
+  }
+</style>

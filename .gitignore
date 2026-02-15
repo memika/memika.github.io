@@ -2,3 +2,16 @@ _site
 .sass-cache
 .jekyll-metadata
 *.DS_Store
+node_modules/
+dist/
+.astro/
+coverage/
+.env
+.env.*
+!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.well-known/brave-rewards-verification.txt

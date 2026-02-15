@@ -1,0 +1,1051 @@
+---
+import PlaygroundLayout from '../layouts/PlaygroundLayout.astro';
+
+const navigation = [
+  { label: 'Focus', href: '#focus' },
+  { label: 'Journey', href: '#journey' },
+  { label: 'Case Study', href: '#case-study' },
+  { label: 'Contact', href: '#contact' }
+];
+
+const focusAreas = [
+  {
+    title: 'Production ML Systems',
+    proofValue: 'present',
+    proofLabel: 'Founding ML Engineer @ Tabula',
+    summary:
+      'I build model-driven features that need to run reliably in real workflows, from prototyping to rollout and monitoring.',
+    tags: ['LLM features', 'Deployment quality', 'Reproducible pipelines']
+  },
+  {
+    title: 'Scientific Machine Learning',
+    proofValue: 'ICLR 2025',
+    proofLabel: 'FreeFlow',
+    proofLinkText: 'workshop paper',
+    proofUrl: 'https://iclr.cc/virtual/2025/35604',
+    summary:
+      'I have worked on generative methods for molecular and graph settings, combining theory with practical implementation.',
+    tags: ['Flow matching', 'Generative models', 'Molecular systems']
+  },
+  {
+    title: 'End-to-End Ownership',
+    proofValue: '100k+',
+    proofLabel: 'Android app downloads',
+    summary: 'I like owning the full lifecycle: data, modeling, evaluation, and delivery.',
+    tags: ['Python/PyTorch', 'Experiment design', 'Cross-functional delivery']
+  }
+];
+
+const journey = [
+  {
+    period: '10/2018-05/2022',
+    title: 'B.Sc. Computer Science',
+    place: 'Technical University Berlin',
+    detail: 'Graduated with honors (top 3%).',
+    kind: 'Education'
+  },
+  {
+    period: '08/2020-10/2021',
+    title: 'Study Abroad',
+    place: 'Lund University, Sweden',
+    detail: 'Selected via ERASMUS+ exchange program.',
+    kind: 'Education',
+    nested: true
+  },
+  {
+    period: '07/2021-08/2023',
+    title: 'Working Student Machine Learning',
+    place: 'Exxeta',
+    detail: 'Built and shipped a web-crawling ML pipeline to identify organizations aligned with UN sustainability goals.',
+    kind: 'Experience',
+    nested: true
+  },
+  {
+    period: '04/2023-11/2025',
+    title: 'M.Sc. Mathematics in Data Science',
+    place: 'Technical University Munich',
+    detail: 'Passed with distinction (sehr gut).',
+    kind: 'Education'
+  },
+  {
+    period: '09/2023-08/2024',
+    title: 'Student Research Assistant',
+    place: 'TUM Data Analytics and Machine Learning Group',
+    detail: 'Researched generative models for graph and molecular modeling (PyTorch).',
+    kind: 'Research',
+    nested: true
+  },
+  {
+    period: '10/2023-11/2024',
+    title: 'MIT Project Collaboration',
+    place: 'MIT x TUM',
+    detail: 'Flow matching for estimating free-energy differences between molecular systems; workshop publication (ICLR 2025).',
+    kind: 'Research',
+    nested: true
+  },
+  {
+    period: '09/2024-02/2025',
+    title: 'Applied Science Internship',
+    place: 'Amazon Development Center Germany',
+    detail: 'Improved deep-learning and LLM solution performance for production systems.',
+    kind: 'Experience'
+  },
+  {
+    period: '01/2026-Present',
+    title: 'Founding ML Engineer',
+    place: 'Tabula',
+    detail: 'Building AI products for the tax domain with a focus on practical model impact.',
+    kind: 'Experience'
+  }
+];
+
+const appCapabilities = [
+  'Designed, developed, and maintained the app independently since 2018',
+  'Reached 100k+ downloads through organic user adoption',
+  'Supports cataloging, wishlist management, search, and lending workflows',
+  'A long-term end-to-end product project from feature ideation to production maintenance'
+];
+
+const skillGroups = [
+  {
+    label: 'Programming',
+    items: 'Python (PyTorch, NumPy, Pandas), Java, Kotlin'
+  },
+  {
+    label: 'Languages',
+    items: 'German (native), English (C1), Swedish (B1)'
+  },
+  {
+    label: 'Interests',
+    items: 'Generative models, graph ML, NLP, LLM agents, product-minded app development'
+  }
+];
+
+const educationHighlights = [
+  {
+    degree: 'M.Sc. Mathematics in Data Science',
+    school: 'Technical University of Munich',
+    notes: 'Passed with distinction (sehr gut)'
+  },
+  {
+    degree: 'B.Sc. Computer Science',
+    school: 'Technical University of Berlin',
+    notes: 'Graduated with honors (top 3%)'
+  }
+];
+---
+
+<PlaygroundLayout
+  title="Mika Rebensburg | Founding ML Engineer"
+  description="Founding ML Engineer building production ML systems with research depth."
+>
+  <main class="page" id="top">
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+
+    <header class="top reveal reveal-1">
+      <a href="#top" class="brand">Mika Rebensburg</a>
+      <nav>
+        {navigation.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))}
+      </nav>
+    </header>
+
+    <section class="hero reveal reveal-2">
+      <p class="eyebrow">
+        Founding ML Engineer @{' '}
+        <a class="hero-tabula-link" href="https://tabula.de/" target="_blank" rel="noreferrer">
+          Tabula
+        </a>{' '}
+        (since Jan 2026)
+      </p>
+      <h1>Science-informed, developer-driven ML engineering.</h1>
+      <p>
+        From an ICLR 2025 workshop paper to 100k+ app downloads, I focus on machine learning that turns strong
+        research into reliable product outcomes.
+      </p>
+      <div class="actions">
+        <a class="cta" href="#focus">See current focus</a>
+        <a class="ghost" href="mailto:rebensburgmika@gmail.com">Email me</a>
+      </div>
+    </section>
+
+    <section class="section" id="focus">
+      <div class="section-head reveal reveal-3">
+        <p class="eyebrow">Current focus</p>
+        <h2>How I approach work</h2>
+      </div>
+      <div class="focus-grid">
+        {focusAreas.map((item, index) => (
+          <article class="focus-card reveal reveal-grid" style={`--delay: ${index * 0.1}s`}>
+            <h3>{item.title}</h3>
+            <p class="focus-summary">{item.summary}</p>
+            <div class="focus-proof">
+              <p class="focus-proof-label">
+                {item.proofLabel}
+                {item.proofLinkText && item.proofUrl && (
+                  <>
+                    {' '}
+                    <a class="focus-proof-link" href={item.proofUrl} target="_blank" rel="noreferrer">
+                      {item.proofLinkText}
+                    </a>
+                  </>
+                )}
+                <span class="focus-proof-value"> · {item.proofValue}</span>
+              </p>
+            </div>
+            <div class="tags">
+              {item.tags.map((tag) => (
+                <span>{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section" id="journey">
+      <div class="section-head reveal reveal-3">
+        <p class="eyebrow">Journey</p>
+        <h2>From foundations to production ownership</h2>
+      </div>
+      <ol class="timeline">
+        {journey.map((item, index) => (
+          <li class={`timeline-item${item.nested ? ' timeline-item-nested' : ''}`} style={`--item-index: ${index}`}>
+            <p class="period">{item.period}</p>
+            <h3>{item.title}</h3>
+            <p>{item.place}</p>
+            <p class="timeline-detail">{item.detail}</p>
+            <span class="kind">
+              {item.kind === 'Research' && (
+                <svg
+                  class="kind-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <circle cx="11" cy="11" r="5"></circle>
+                  <path d="M16.65 16.65L21 21"></path>
+                </svg>
+              )}
+              {item.kind === 'Experience' && (
+                <svg
+                  class="kind-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect x="3" y="7" width="18" height="12" rx="2"></rect>
+                  <path d="M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2"></path>
+                  <path d="M3 12h18"></path>
+                </svg>
+              )}
+              {item.kind === 'Education' && (
+                <svg
+                  class="kind-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M2 9l10-5 10 5-10 5-10-5z"></path>
+                  <path d="M6 11.5v4.5c0 1.6 2.7 3 6 3s6-1.4 6-3v-4.5"></path>
+                </svg>
+              )}
+              {item.kind}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="section case-study" id="case-study">
+      <div class="section-head reveal reveal-3">
+        <p class="eyebrow">Featured build</p>
+        <h2>Library App (Android)</h2>
+      </div>
+      <div class="case-grid">
+        <figure class="case-image reveal reveal-3">
+          <img src="/legacy/library-app.png" alt="Library App interface from the legacy portfolio" loading="lazy" />
+        </figure>
+        <article class="case-text reveal reveal-3">
+          <p>
+            I started this app to learn Android development and turned it into a long-running product with sustained
+            usage. It remains one of my clearest examples of end-to-end product ownership.
+          </p>
+          <ul>
+            {appCapabilities.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+          <a
+            class="ghost"
+            href="https://play.google.com/store/apps/details?id=com.rebensburgsolutions.booklibrary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on Google Play
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section credentials reveal reveal-3">
+      <div class="section-head">
+        <p class="eyebrow">Credentials</p>
+        <h2>Core background and working toolkit</h2>
+      </div>
+      <div class="credentials-grid">
+        <article class="credential-card">
+          <h3>Education highlights</h3>
+          <ul class="education-list">
+            {educationHighlights.map((item) => (
+              <li>
+                <p class="education-degree">{item.degree}</p>
+                <p>{item.school}</p>
+                <p class="education-note">{item.notes}</p>
+              </li>
+            ))}
+          </ul>
+        </article>
+        <article class="credential-card">
+          <h3>Toolkit and profile</h3>
+          <dl class="skill-list">
+            {skillGroups.map((group) => (
+              <div>
+                <dt>{group.label}</dt>
+                <dd>{group.items}</dd>
+              </div>
+            ))}
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:rebensburgmika@gmail.com">rebensburgmika@gmail.com</a>
+        <a href="https://www.linkedin.com/in/mika-rebensburg/" target="_blank" rel="noreferrer">LinkedIn profile</a>
+        <a class="legal-link" href="/impressum">Impressum</a>
+        <a class="legal-link" href="/datenschutz">Datenschutz</a>
+      </div>
+      <p>Berlin, Germany</p>
+    </section>
+  </main>
+
+  <script is:inline>
+    const timeline = document.querySelector('.timeline');
+    if (timeline && 'IntersectionObserver' in window) {
+      const items = timeline.querySelectorAll('.timeline-item');
+      timeline.classList.add('timeline-enhanced');
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.28, rootMargin: '0px 0px -8% 0px' }
+      );
+
+      items.forEach((item) => observer.observe(item));
+    }
+  </script>
+</PlaygroundLayout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600;700&display=swap');
+
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html),
+  :global(body) {
+    margin: 0;
+    min-height: 100%;
+    background: #f7f1e7;
+    color: #1c2422;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .page {
+    position: relative;
+    overflow-x: clip;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.5rem 1.2rem 3.5rem;
+  }
+
+  .ambient {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(2px);
+  }
+
+  .ambient-a {
+    width: 440px;
+    height: 440px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, #f8bc88 0%, rgba(248, 188, 136, 0) 70%);
+    top: -160px;
+    right: -130px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 3.1rem;
+    font-size: 0.92rem;
+  }
+
+  .brand {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    text-decoration: none;
+    color: #1c2422;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.3rem;
+  }
+
+  nav a {
+    color: #1c2422;
+    text-decoration: none;
+    border: 1px solid #d9cfbf;
+    border-radius: 999px;
+    padding: 0.32rem 0.7rem;
+    transition: border-color 180ms ease, transform 180ms ease;
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  nav a:hover {
+    border-color: #197665;
+    transform: translateY(-1px);
+  }
+
+  .hero {
+    max-width: 72ch;
+    margin-bottom: 2.2rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #12584b;
+    font-size: 0.74rem;
+    font-weight: 700;
+  }
+
+  h1,
+  h2 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    margin-top: 0.7rem;
+    font-size: clamp(2.1rem, 5.5vw, 4.1rem);
+    line-height: 1.02;
+    max-width: 14ch;
+    font-weight: 700;
+  }
+
+  .hero p {
+    color: #3f4e4a;
+    font-size: 1.06rem;
+    max-width: 61ch;
+  }
+
+  .hero-tabula-link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .hero-tabula-link:hover {
+    color: #176c5c;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .cta {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    background: #176c5c;
+    border: 1px solid #176c5c;
+    border-radius: 999px;
+    padding: 0.53rem 0.92rem;
+    font-weight: 600;
+    transition: transform 180ms ease;
+  }
+
+  .ghost {
+    display: inline-block;
+    color: #1c2422;
+    text-decoration: none;
+    border: 1px solid #d9cfbf;
+    border-radius: 999px;
+    padding: 0.53rem 0.92rem;
+    font-weight: 600;
+    transition: border-color 180ms ease, transform 180ms ease;
+  }
+
+  .cta:hover,
+  .ghost:hover {
+    transform: translateY(-1px);
+  }
+
+  .ghost:hover {
+    border-color: #176c5c;
+  }
+
+  .section {
+    margin-top: 2.8rem;
+  }
+
+  #focus,
+  #journey,
+  #case-study,
+  #contact {
+    scroll-margin-top: 1rem;
+  }
+
+  .section-head h2 {
+    margin-top: 0.6rem;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    max-width: 18ch;
+  }
+
+  #focus .section-head h2 {
+    max-width: none;
+    line-height: 1.06;
+    white-space: nowrap;
+    font-size: clamp(1.45rem, 2.4vw, 2.2rem);
+  }
+
+  .focus-grid {
+    margin-top: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+
+  .focus-card {
+    position: relative;
+    border: 1px solid #ddcfbf;
+    border-radius: 22px;
+    padding: 1.35rem;
+    background: linear-gradient(165deg, #fffdfa, #fbf7ee);
+    box-shadow: 0 14px 24px rgba(31, 53, 47, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .focus-proof {
+    display: block;
+    width: 100%;
+  }
+
+  .focus-proof-value {
+    margin: 0 0 0 0.15rem;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 0.86rem;
+    color: #0f6353;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .focus-proof-label {
+    margin: 0.1rem 0 0;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 0.85rem;
+    color: #1f5047;
+    flex: 1 1 16rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .focus-proof-link {
+    color: inherit;
+    text-underline-offset: 3px;
+  }
+
+  .focus-proof-link:hover {
+    color: #176c5c;
+  }
+
+  .focus-card h3 {
+    margin: 0;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: clamp(1.25rem, 2.25vw, 1.55rem);
+    line-height: 1.05;
+  }
+
+  .focus-summary {
+    margin: 0;
+    color: #41534e;
+    line-height: 1.42;
+    font-size: 1.04rem;
+  }
+
+  .focus-card .tags {
+    margin-top: 0.1rem;
+  }
+
+  .tags {
+    margin-top: 0.85rem;
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .tags span {
+    border: 1px solid #d7cdbf;
+    border-radius: 999px;
+    padding: 0.26rem 0.58rem;
+    font-size: 0.77rem;
+    color: #294f45;
+    background: #f5f0e7;
+  }
+
+  .timeline {
+    list-style: none;
+    margin: 1.2rem auto 0;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    gap: 0.95rem;
+    max-width: 760px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.8rem;
+    left: 0.9rem;
+    width: 2px;
+    background: linear-gradient(180deg, #176c5c 0%, #67a697 52%, rgba(103, 166, 151, 0.2) 100%);
+    border-radius: 999px;
+    z-index: 0;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-left: 2.7rem;
+    border: 1px solid #dfd4c4;
+    border-radius: 16px;
+    padding: 1rem;
+    background: #fffdfa;
+    box-shadow: 0 14px 20px rgba(31, 53, 47, 0.06);
+    z-index: 1;
+    isolation: isolate;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 1.4rem;
+    left: -2.15rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: #176c5c;
+    box-shadow: 0 0 0 4px rgba(23, 108, 92, 0.14);
+    z-index: 3;
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    top: calc(1.05rem + 11px);
+    left: -1.84rem;
+    width: 0.9rem;
+    height: 0.58rem;
+    border-left: 2px solid #9dbfb6;
+    border-bottom: 2px solid #9dbfb6;
+    border-bottom-left-radius: 8px;
+    z-index: 1;
+  }
+
+  .timeline.timeline-enhanced .timeline-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 620ms cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 620ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: calc(var(--item-index, 0) * 95ms);
+  }
+
+  .timeline.timeline-enhanced .timeline-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .period {
+    margin: 0;
+    font-size: 0.8rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #916634;
+    font-weight: 700;
+  }
+
+  .timeline-item h3 {
+    margin: 0.5rem 0 0;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.1;
+  }
+
+  .timeline-item p {
+    margin: 0.45rem 0 0;
+    color: #4f5f5a;
+  }
+
+  .timeline-detail {
+    margin-top: 0.55rem;
+    color: #3e4d48;
+  }
+
+  .timeline-item-nested {
+    margin-left: 4.1rem;
+    background: #fdfbf7;
+    border-style: dashed;
+  }
+
+  .timeline-item-nested::before {
+    width: 10px;
+    height: 10px;
+    left: -3.45rem;
+    top: 1.45rem;
+    box-shadow: 0 0 0 3px rgba(23, 108, 92, 0.11);
+    z-index: 3;
+  }
+
+  .timeline-item-nested::after {
+    width: 2.65rem;
+    left: -3.25rem;
+    top: calc(1rem + 10px);
+    height: 0.7rem;
+    z-index: 0;
+  }
+
+  .kind {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    margin-top: 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #155747;
+    background: #e5f0ec;
+    border-radius: 999px;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .kind-icon {
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .case-study {
+    padding: 1.2rem;
+    border: 1px solid #dcccc0;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(254, 251, 246, 0.95), rgba(245, 254, 251, 0.95));
+  }
+
+  .case-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .case-image {
+    margin: 0;
+    border: 1px solid #ded2c3;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .case-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .case-text p {
+    margin: 0;
+    color: #4e5d58;
+  }
+
+  .case-text ul {
+    margin: 0.9rem 0 1rem;
+    padding-left: 1.2rem;
+    color: #2f3e39;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .credentials {
+    margin-top: 2.8rem;
+  }
+
+  .credentials-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+
+  .credential-card {
+    border: 1px solid #dfd4c4;
+    border-radius: 16px;
+    padding: 1.15rem;
+    background: #fffdf8;
+  }
+
+  .credential-card h3 {
+    margin: 0;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .education-list {
+    list-style: none;
+    margin: 0.8rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .education-list li p {
+    margin: 0.18rem 0 0;
+    color: #4a5955;
+  }
+
+  .education-degree {
+    font-weight: 700;
+    color: #1f2927;
+  }
+
+  .education-note {
+    font-size: 0.92rem;
+    color: #556560;
+  }
+
+  .skill-list {
+    margin: 0.8rem 0 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .skill-list dt {
+    font-weight: 700;
+    color: #1f2927;
+  }
+
+  .skill-list dd {
+    margin: 0.15rem 0 0;
+    color: #4a5955;
+  }
+
+  .contact {
+    margin-top: 2.8rem;
+    padding: 1.15rem;
+    border-top: 2px solid #d7cdbf;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .contact h2 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .contact a {
+    font-weight: 600;
+    color: #176c5c;
+    text-underline-offset: 3px;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .legal-link {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d9cfbf;
+    border-radius: 999px;
+    padding: 0.28rem 0.62rem;
+    line-height: 1;
+    text-decoration: none;
+    color: #2b3633;
+    font-size: 0.85rem;
+  }
+
+  .contact p {
+    margin: 0;
+    color: #56645f;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: rise-in 650ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  }
+
+  .reveal-1 {
+    animation-delay: 0.06s;
+  }
+
+  .reveal-2 {
+    animation-delay: 0.16s;
+  }
+
+  .reveal-3 {
+    animation-delay: 0.26s;
+  }
+
+  .reveal-grid {
+    animation-delay: calc(0.28s + var(--delay, 0s));
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .focus-grid,
+    .credentials-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .case-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .top {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    nav {
+      justify-content: flex-start;
+    }
+
+    h1 {
+      max-width: 100%;
+    }
+
+    .focus-grid,
+    .credentials-grid,
+    .timeline {
+      max-width: 100%;
+    }
+
+    .focus-proof-value {
+      margin-left: 0;
+      white-space: normal;
+    }
+
+    .focus-grid,
+    .credentials-grid,
+    .case-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline-item-nested {
+      margin-left: 3.25rem;
+    }
+
+    .timeline-item-nested::before {
+      left: -2.6rem;
+    }
+
+    .timeline-item-nested::after {
+      left: -2.4rem;
+      width: 1.8rem;
+      height: 0.6rem;
+    }
+
+    .contact {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

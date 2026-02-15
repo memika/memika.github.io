@@ -1,0 +1,93 @@
+---
+import PlaygroundLayout from '../layouts/PlaygroundLayout.astro';
+---
+
+<PlaygroundLayout title="Impressum | Mika Rebensburg" description="Legal notice">
+  <main class="impressum-page">
+    <a class="back-link" href="/">Back to homepage</a>
+    <h1>Impressum</h1>
+    <p class="legal-hint">Angaben gemäß § 5 TMG</p>
+
+    <section>
+      <h2>Anbieter</h2>
+      <p>Mika Rebensburg</p>
+      <p>Zwinglistraße 29a</p>
+      <p>10555 Berlin</p>
+      <p>Deutschland</p>
+      <p>
+        E-Mail: <a href="mailto:rebensburgmika@gmail.com">rebensburgmika@gmail.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>Mika Rebensburg</p>
+      <p>Zwinglistraße 29a</p>
+      <p>10555 Berlin</p>
+    </section>
+
+    <section>
+      <h2>Rechtliche Hinweise</h2>
+      <p>
+        Diese Website dient der persönlichen beruflichen Darstellung. Es besteht kein Angebot von Waren oder
+        entgeltlichen Dienstleistungen über diese Website.
+      </p>
+    </section>
+  </main>
+</PlaygroundLayout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@500;600;700&display=swap');
+
+  .impressum-page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem 3rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #1c2422;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.1rem;
+    color: #176c5c;
+    text-underline-offset: 3px;
+  }
+
+  h1,
+  h2 {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  .legal-hint {
+    margin: 0.5rem 0 1.4rem;
+    color: #5b6b66;
+  }
+
+  section {
+    margin-top: 1.2rem;
+    border: 1px solid #dfd4c4;
+    border-radius: 14px;
+    padding: 1rem;
+    background: #fffdf9;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin: 0.5rem 0 0;
+    color: #3e4d48;
+  }
+
+  a {
+    color: #176c5c;
+  }
+</style>
